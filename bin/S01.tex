@@ -1,0 +1,35 @@
+\chapter{Introducción}
+
+Una ecuación diferencial es una ecuación (valga la redundancia) que involucra a una función incógnita, sus variables independientes y sus derivadas ordinarias o parciales. En las ecuaciones de toda la vida como $x^{2} + 4x + 8 = 0$, obteníamos posibles valores para cada incógnita $x_{1}, x_{2}$. La diferencia con las E.D es que vamos a trabajar con tasas de variaciones (derivadas), sea: $\frac{d^{2}x}{dt^{2}} + \frac{dx}{dt} + 8 = 0$. La respuesta ahora ya no es número sino una función que en este caso depende de $X(t)$.
+
+Por otro lado, las ecuaciones diferenciales datan del año 1676, nacen en busca de modelar situaciones que no eran posible ser resueltas usando la matemática tradicional, es así que nace este modelo matemático. Entre los principales modelos matemáticos tenemos: \textit{Modelo poblacional, Decaimiento radioactivo, Enfriamiento de Newton, Ley de Torricelli, etc}.
+
+\section{Clasificación}
+Cuando tengamos alguna ecuación diferencial de la forma $\frac{dy}{dx} = 0.2xy$, decimos que $y$ es la variable dependiente (imagen) y $x$ es la variable independiente (preimagen). Por otro lado, cada que tengamos derivadas parciales $\frac{\partial y}{\partial x}$, se denominan ecuaciones diferenciales parciales (E.D.P).
+
+Es así entonces, que las ecuaciones diferenciales ordinarias (E.D.O) tienen la forma $\frac{dy}{dx}$, y dependen de una sola variable independiente, mientras que en las ecuaciones diferenciales parciales (E.D.P), nuestra solución depende de más de una variables independientes, y tiene la forma $\frac{\partial y}{\partial x}$.
+\begin{align*}
+  \dfrac{d^{3}y}{dx^{3}} - 5 \left( \dfrac{dy}{dx} \right)^{3} + 6y = e^{x}
+\end{align*}
+La clasificación por orden está dado a partir de la mayor derivada en la ecuación, es decir $\frac{d^{2}y}{dx^{2}}$ representa una ecuación diferencial de segundo orden. Es muy común equivocarse con el número del exponente, tenemos que fijarnos siempre en el exponente de la derivada. En la ecuación propuesta, la E.D es de tercer orden, gracias a $\frac{d^{3}y}{dx^{3}}$ (el 3 sobre la derivada $d^{3}y$).
+
+\section{Linealidad}
+Una ecuación diferencial, para que tenga una forma lineal, la variable dependiente $y$, y todas sus derivadas $\frac{dy}{dx}, \frac{d^{n}y}{dx^{n}}$ tienen que ser de primer orden, es decir la potencia de cada uno de estos términos es igual a 1. Además los coeficientes $a_{0}$, de cada derivada ,$\frac{dy}{dx}, \frac{d^{n}y}{dx^{n}}$ tienen que ser constantes o a lo más dependen de la variable independiente.
+\begin{align*}
+  a_{n}(x) = \frac{d^{n}y}{dx^{n}} +  a_{n-1}(x)\frac{d^{n-1}y}{dx^{n-1}}+ \dots + a_{1}(x)\frac{dy}{dx} + a_{0}(x)y = g(x)
+\end{align*}
+
+\section{Tipos de soluciones}
+Para desarrollar problemas de ecuaciones diferenciales, tenemos distintos tipos de soluciones: \textit{soluciones generales y las soluciones particulares}. La solución particular representa una solución específica para una E.D, mientras que la general representa una familia de funciones que satisfacen la E.D (cuando tenemos ciertos escenarios con ecuaciones diferenciales del tipo constante usamos las generales).
+
+Por parte de las particulares necesariamente debemos de tener una o varias constantes arbitarias y constantes iniciales: valores que satisfacen una solución particular $y(x)$, para un valor específico de la variable independiente, tal que $y(x_{0}) = y_{0}$. Si una E.D es de orden 2, entonces la solución general tendrá dos constantes arbitarias $c_{1}, c_{2}$, pues por teoría para grado $n$: 
+\begin{align*}
+  F(x, y, y', \dots, y^{(n)}) = 0
+\end{align*}
+
+\section{Valores iniciales}
+Con frecuencia nos interesan problemas en los que buscamos una solución $y(x)$ de una ecuación diferencial tal que $y(x)$ satisface ciertas condiciones prescritas, si estas condiciones están aplicadas todas en el mismo punto (en este caso $x_{0}$), estas se denominan condiciones iniciales. Por ejemplo dado la solución $y = c_{1} \cos(t) + c_{2} \sin(t)$, es una familia de soluciones de la siguiente E.D:
+\begin{align*}
+  y'' + y &= 0 \Longrightarrow y(0) = -1 \wedge y(0) = 8
+\end{align*}
+Es así que junto a sus dos condiciones iniciales en un mismo punto $y(x_{0} = y_{0}$, podemos resolver, pues evaluando para cada condición (reemplazamos con $x_{0}$ y donde necesitamos derivamos), llegamos a las constantes, que por último reemplazamos en la expresión original $y = -\cos(t) + 8\sen(t)$. 

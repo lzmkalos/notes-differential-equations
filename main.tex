@@ -1,0 +1,91 @@
+%|====================| config
+\documentclass[11pt, A4]{report}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-noshorthands]{babel} 
+\setcounter{secnumdepth}{5}
+
+%|====================| packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{cancel}
+\usepackage{yhmath}
+\usepackage{pdfpages}
+\usepackage{multicol}
+\usepackage{fancybox}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{relsize}
+\usepackage{nomencl}
+\usepackage{tcolorbox, tikz}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+%\usepackage{dejavu}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip} 
+\usepackage{blindtext}
+\usepackage{microtype}
+\usepackage{accanthis} %=== FONT
+
+%|====================| customization
+\usepackage[]{titlesec, xcolor}
+\titleformat{\chapter}{\Huge}{\bfseries{Sección }\thechapter{:}}{10pt}{\huge}[{\titlerule[0pt]}]
+
+%title
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+\titlespacing{\chapter}{0pt}{0pt}{20pt}
+\titlespacing{\chapter}{0pt}{3ex plus 1ex minus 0.2ex}{10pt}
+\titleformat{\paragraph}{\normalfont\large\bfseries}{\thesection}{1em}{}[{\titlerule[0.3pt]}]
+\titlespacing{\chapter}{0pt}{3ex plus 1ex minus 0.2ex}{10pt}
+\tikzset{
+    ultra thin/.style= {line width=0.1pt},
+    very thin/.style=  {line width=0.2pt},
+    thin/.style=       {line width=0.4pt},% thin is the default
+    semithick/.style=  {line width=0.6pt},
+    thick/.style=      {line width=0.8pt},
+    very thick/.style= {line width=1.2pt},
+    ultra thick/.style={line width=1.6pt}
+}
+
+%|====================| boxes
+\definecolor{sky}{HTML}{78A2CC}
+\definecolor{navy}{HTML}{203354}
+\theoremstyle{definition}
+\def\definition#1{\par\medskip\noindent{\color{navy!100!}\vrule width 4pt}%
+\colorbox{sky!35!}{\parbox[c]{\dimexpr\linewidth-5pt-2\fboxsep-2\fboxrule}
+{\begin{defi}#1\end{defi}}}\par\medskip}
+\setlength\fboxsep{10pt}
+
+%|====================| data
+\pagestyle{fancy}
+\fancyhead[R]{Kalos Lazo}
+\fancyhead[L]{Ecuaciones Diferenciales}
+\renewcommand\contentsname{ÍNDICE}
+\title{\textbf{Ecuaciones Diferenciales}\\ \large{Ciencia de la Computación}}
+\author{Kalos Lazo}
+\date{}
+
+
+%|====================| doc
+\begin{document}
+    \onehalfspacing 
+    \noindent
+    \maketitle
+    \tableofcontents
+
+    % FILE FOR EACH TOPIC
+    \include{bin/S01.tex}
+    \include{bin/S02.tex}
+
+\end{document}
